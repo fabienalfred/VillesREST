@@ -10,7 +10,6 @@ import javax.persistence.PersistenceContext;
 import villes.entities.Ville;
 
 @Stateless
-@Startup
 public class VillesDAO {
 
 	@PersistenceContext(unitName="france") EntityManager em;
