@@ -14,16 +14,22 @@ import villes.entities.Ville;
 
 @Path("/villes")
 public class VillesService {
-	private static String CHARSET = "charset=UTF-8";
-
 	@EJB private VillesDAO dao;
 	
 	
 	@Path("/cp/{cp}")
 	@GET
-	@Produces(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON + ";charset=utf-8")
 	public List<Ville> getVillesByCodePostal(@PathParam("cp") String cp){
 		return dao.getVillesByCodePostal(cp);
+	}
+	
+	@Path("/nom/{nom}")
+	@GET
+	@Produces(MediaType.TEXT_PLAIN + ";charset=utf-8")
+//	@Produces(MediaType.APPLICATION_JSON + ";charset=utf-8")
+	public List<Ville> getVillesByNom(@PathParam("nom") String nom){
+		return dao.getVillesByNom(nom);
 	}
 	
 }

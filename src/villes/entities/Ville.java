@@ -12,7 +12,10 @@ import javax.persistence.Table;
 @Entity
 @Table(name="villes")
 @NamedQueries({
-	@NamedQuery(name="Ville.getVillesByCodePostal",query="SELECT v FROM Ville v WHERE v.codePostal LIKE :cp")
+	@NamedQuery(name="Ville.getVillesByCodePostal",
+				query="SELECT v FROM Ville v WHERE v.codePostal LIKE :cp ORDER BY v.codePostal"),
+	@NamedQuery(name="Ville.getVillesByNom",
+				query="SELECT v FROM Ville v WHERE v.nom LIKE :nom ORDER BY v.nom")
 })
 public class Ville {
 	@Id
@@ -77,7 +80,7 @@ public class Ville {
 		return "Ville [id=" + id + ", nom=" + nom + ", departement="
 				+ departement + ", region=" + region + ", codePostal="
 				+ codePostal + ", latitude=" + latitude + ", longitude="
-				+ longitude + "]";
+				+ longitude + "]\n";
 	}
 	
 }
