@@ -1,0 +1,42 @@
+@CHARSET "UTF-8";
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#page {
+	width: 1000px;
+	height: 100%;
+	margin: auto;
+	background-color: #f6f6f6;
+}
+
+#divForm {
+	width: 100%;
+}
+
+#formSearch {
+	width: 350px;
+	margin: auto;
+}
+
+label {
+	display: inline-block;
+	width: 150px;
+}
+
+#divVilles {
+	width: 200px;
+	margin: auto;
+}
+
+select, #showMap{
+	width: 100%;
+}
+
+#map {
+	height: 60%;
+	width: 100%;
+}

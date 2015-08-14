@@ -19,16 +19,14 @@ public class VillesService {
 	
 	@Path("/cp/{cp}")
 	@GET
-	@Produces(MediaType.TEXT_PLAIN + ";charset=utf-8")
-//	@Produces(MediaType.APPLICATION_JSON + ";charset=utf-8")
+	@Produces(MediaType.APPLICATION_JSON)
 	public List<Ville> getVillesByCodePostal(@PathParam("cp") String cp){
 		return dao.getVillesByCodePostal(cp);
 	}
 	
 	@Path("/nom/{nom}")
 	@GET
-//	@Produces(MediaType.TEXT_PLAIN + ";charset=utf-8")
-	@Produces(MediaType.APPLICATION_JSON + ";charset=utf-8")
+	@Produces(MediaType.APPLICATION_JSON)
 	public List<Ville> getVillesByNom(@PathParam("nom") String nom){
 		return dao.getVillesByNom(nom);
 	}
