@@ -2,23 +2,29 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<title>Interrogation JSON</title>
 <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
 <script type="text/javascript" src="js/villes.js"></script>
-<title>Insert title here</title>
+<style type="text/css">
+select {
+	width: 200px;
+}
+
+#map {
+	height:
+}
+</style>
 </head>
 <body>
-	<h1>VillesREST</h1>
-	
-	<fieldset>
-		<legend>Entrez un code postal</legend>
-		<form>
-			Code postal : <input id="cp" />
-			<button type="button" id="button">Valider</button>
-		</form>
-	</fieldset>
-	
-	<div><select id="villes" size="10"></select></div>
-	
+	<form>
+		CP : <input type="text" size="5" id="cp" name="cp" />
+		<button type="button" id="search">Rechercher</button>
+	</form>
+	<br />
+	<br />
+	<div>
+		<select id="villes" size="10"></select>
+	</div>
 	<div id="map"></div>
 </body>
 </html>

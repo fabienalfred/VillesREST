@@ -1,12 +1,12 @@
 getVilles = function(cp, callbackFunction){
 	var url = "rest/villes/cp/"+cp;
+	console.log("ok");
 	$.getJSON(url, function(data){
 		callbackFunction(data);
 	});
 };
 
 function showVilles(data){
-	console.log("ok");
 	var html = "";
 	$.each(data, function(index, ville){
 		html += "<option value='" + ville.id
